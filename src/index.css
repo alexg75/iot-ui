@@ -38,15 +38,26 @@ code {
   width: 20%;
   display: inline-block;  
 }
+
 button {
   background-color: lightblue;
   width: 80%;
   height: 100%;
   border-radius: 25px;
   height: 25px;
-  color: black;
-  
+  color: black;  
 }
+
+button:active {
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  border-radius: 25px;
+  height: 25px;
+  color: grey;  
+  border-color: darkgrey;
+}
+
 .footer {
   background-color: black;
   color: white;

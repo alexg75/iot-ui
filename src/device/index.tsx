@@ -4,9 +4,9 @@ import { DeviceProperties } from "./Properties"
 export const DeviceRows = () => {  
     const devices = [
         {id: 'LoungeTV', description: 'LOUNGE TV'},
-        {id: 'lounge-conservatory', description: 'LOUNGE CONSERVATORY'},
-        {id: 'kitchen-sofa', description: 'KITCHEN SOFA'},
-        {id: 'kitchen-garden', description: 'KITCHEN GARDEN'},
+        {id: 'LoungeConservatory', description: 'LOUNGE CONSERVATORY'},
+        {id: 'KitchenSofa', description: 'KITCHEN SOFA'},
+        {id: 'KitchenGarden', description: 'KITCHEN GARDEN'},        
     ]
 
     return (
