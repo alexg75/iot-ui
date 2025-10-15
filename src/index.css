@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  background-color: black;
+  color: white;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.row {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+  padding: 20px;  
+}
+
+.firstColumn {
+  width: 60%;
+  display: inline-block;  
+  text-align: left;
+}
+.secondColumn {
+  width: 20%;
+  display: inline-block;  
+}
+.thirdColumn {
+  width: 20%;
+  display: inline-block;  
+}
+button {
+  background-color: lightblue;
+  width: 80%;
+  height: 100%;
+  border-radius: 25px;
+  height: 25px;
+  color: black;
+  
+}
+.footer {
+  background-color: black;
+  color: white;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+  padding: 10px;
+  font-size: x-small;
+}
