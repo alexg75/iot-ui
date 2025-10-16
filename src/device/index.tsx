@@ -1,4 +1,5 @@
-import turn from "../controller/controller";
+
+import { RemoteService } from "../controller/controller";
 import { DeviceProperties } from "./Properties"
 
 export const DeviceRows = () => {  
@@ -22,11 +23,13 @@ export const DeviceRows = () => {
 export const DeviceRow = (device: DeviceProperties) => {
     console.log(device);
 
+    const remoteService = new RemoteService();
+
     return (
         <div className="row">
             <div className="firstColumn">{device.description}</div>
-            <div className="secondColumn"><button onClick={() => turn(device.id,'ON')}>ON</button></div>
-            <div className="thirdColumn"><button onClick={() => turn(device.id,'OFF')}>OFF</button></div>
+            <div className="secondColumn"><button onClick={() => remoteService.turn(device.id,'ON')}>ON</button></div>
+            <div className="thirdColumn"><button onClick={() => remoteService.turn(device.id,'OFF')}>OFF</button></div>
         </div>
     )
 }

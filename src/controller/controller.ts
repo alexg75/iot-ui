@@ -1,21 +1,28 @@
-export default async function turn(alias: string, operation: string) {
-    console.log(alias + "," + operation);
+import { ServiceUtilsModule } from "../utils/RemoteServiceUtils";
 
-    var url = "http://rp-lights:8080/api/alias/"+alias+"/operation/"+operation;
-    console.log("url: " + url);
-    const request: RequestInfo = new Request(url, {
-        // We need to set the `method` to `POST` and assign the headers
-        method: 'POST',
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        },
-    })
+export class RemoteService {
+    private host: string = "rp-lights";
+    private port: number = 8080;
+    private remoteServiceUtils = new ServiceUtilsModule.RemoteServiceUtils();
+    constructor() {
+        this.host = this.remoteServiceUtils.getHost();
+        this.port = this.remoteServiceUtils.getPort();
+    }
+    
+    turn(alias: string, operation: string) { 
+        console.log(alias + "," + operation);
 
-    try {
-        let response = await fetch(request)
-    } catch (e) {
-        console.error(e);
+        var url = "http://"+this.host+":"+this.port+"/api/alias/"+alias+"/operation/"+operation;
+        console.log("url: " + url);
+        const request: RequestInfo = new Request(url, {
+            // We need to set the `method` to `POST` and assign the headers
+            method: 'POST',
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            },
+        })
+
+        fetch(request);
     }
 }
-
  
